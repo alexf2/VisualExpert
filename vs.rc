@@ -1,0 +1,1351 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "vs.rh"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "vs.rh\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_FORM_EXPERT DIALOG DISCARDABLE  0, 0, 390, 161
+STYLE DS_3DLOOK | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List3",IDC_LIST_FAC,"SysListView32",WS_BORDER | 
+                    WS_TABSTOP,5,27,90,107
+    CONTROL         "List3",IDC_LIST_PRO,"SysListView32",WS_BORDER | 
+                    WS_TABSTOP,101,27,90,107
+    CONTROL         "List3",IDC_LIST_NET,"SysListView32",WS_BORDER | 
+                    WS_TABSTOP,197,27,90,107
+    CONTROL         "List3",IDC_LIST_FRM,"SysListView32",WS_BORDER | 
+                    WS_TABSTOP,293,27,90,107
+    LTEXT           "Базы фактов",IDC_STATIC,5,16,46,8
+    LTEXT           "Базы продукций",IDC_STATIC,101,16,56,8
+    LTEXT           "Сети",IDC_STATIC,197,16,17,8
+    LTEXT           "Фреймы",IDC_STATIC,293,16,31,8
+END
+
+IDD_DIALOG_CUR_ACESS DIALOGEX 0, 0, 240, 82
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME
+CAPTION "Текущий уровень доступа"
+CLASS "BorDlg_Gray"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "&Ok",IDOK,"BorBtn",WS_TABSTOP | 0x1,10,46,43,25
+    ICON            IDR_MAINFRAME,99,21,9,20,20
+    EDITTEXT        IDC_EDIT_CURACESS,64,9,167,60,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY,WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+END
+
+IDD_ACESSLVL DIALOGEX 0, 0, 258, 162
+STYLE DS_3DLOOK | DS_CENTER | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Изменение уровня доступа"
+CLASS "BorDlg_Gray"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "&Ok",IDOK,"BorBtn",WS_TABSTOP | 0x1,207,46,43,25
+    CONTROL         "&Cancel",IDCANCEL,"BorBtn",WS_TABSTOP | 0x1,207,89,43,
+                    25
+END
+
+IDD_PROP_USER DIALOG DISCARDABLE  0, 0, 174, 129
+STYLE DS_MODALFRAME | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Пользователь"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,29,159,52
+    CONTROL         "Анонимный",IDC_PROP_RAD_ANONIM,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,10,55,10
+    CONTROL         "Именованный",IDC_PROP_RAD_NAMED,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,14,28,64,10
+    EDITTEXT        IDC_PROP_ED_NAME,74,42,85,14,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_PROP_ED_FAM,74,60,85,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROP_ED_PASS1,73,89,85,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROP_ED_PASS2,73,107,85,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Пароль (повтор)",IDC_STATIC_PASS2,15,110,56,8
+    LTEXT           "Пароль",IDC_STATIC_PASS1,31,92,26,8
+    LTEXT           "Фамилия",IDC_STATIC,32,63,34,8
+    LTEXT           "Имя",IDC_STATIC,32,45,16,8
+    ICON            IDR_MAINFRAME,IDR_MAINFRAME,145,5,21,20
+END
+
+IDD_PROP_ADM DIALOGEX 0, 0, 177, 127
+STYLE DS_MODALFRAME | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Администратор"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PROP_ED_PASS1,76,78,85,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROP_ED_PASS2,76,97,85,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Пароль",IDC_STATIC,32,81,31,8
+    LTEXT           "Пароль (повтор)",IDC_STATIC,16,100,59,8
+    CONTROL         159,IDC_STATIC,"Static",SS_BITMAP,7,6,64,59,
+                    WS_EX_TRANSPARENT
+END
+
+IDD_PROP_EXPERT DIALOG DISCARDABLE  0, 0, 174, 129
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Эксперт"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,29,159,52
+    CONTROL         "Анонимный",IDC_PROP_RAD_ANONIM,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,9,55,10
+    CONTROL         "Именованный",IDC_PROP_RAD_NAMED,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,14,28,64,10
+    EDITTEXT        IDC_PROP_ED_NAME,74,42,85,14,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_PROP_ED_FAM,74,60,85,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROP_ED_PASS1,73,89,85,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROP_ED_PASS2,73,107,85,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Пароль (повтор)",IDC_STATIC_PASS2,15,110,56,8
+    LTEXT           "Пароль",IDC_STATIC_PASS1,31,92,26,8
+    LTEXT           "Фамилия",IDC_STATIC,32,63,34,8
+    LTEXT           "Имя",IDC_STATIC,32,45,16,8
+    ICON            IDR_MAINFRAME,IDR_MAINFRAME,145,5,21,20
+END
+
+IDD_PROP_KOGNIT DIALOG DISCARDABLE  0, 0, 174, 129
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Когнитолог"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,29,159,52
+    CONTROL         "Анонимный",IDC_PROP_RAD_ANONIM,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,9,55,10
+    CONTROL         "Именованный",IDC_PROP_RAD_NAMED,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,14,28,64,10
+    EDITTEXT        IDC_PROP_ED_NAME,74,42,85,14,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_PROP_ED_FAM,74,60,85,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROP_ED_PASS1,73,89,85,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROP_ED_PASS2,73,107,85,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Пароль (повтор)",IDC_STATIC_PASS2,15,110,56,8
+    LTEXT           "Пароль",IDC_STATIC_PASS1,31,92,26,8
+    LTEXT           "Фамилия",IDC_STATIC,32,63,34,8
+    LTEXT           "Имя",IDC_STATIC,32,45,16,8
+    ICON            IDR_MAINFRAME,IDR_MAINFRAME,145,5,21,20
+END
+
+IDD_USER_USER DIALOGEX 0, 0, 298, 166
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Пользователи"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_STATIC_GRP,"BorShade",WS_GROUP | 0x1,10,12,255,18
+    CONTROL         "List2",IDC_LIST_USERS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,10,30,255,107,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_EDIT_NAME,10,141,67,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FAM,79,141,67,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_CLASS,148,142,64,40,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_PASS,214,141,52,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "",IDC_BTN_UPDATE,271,140,16,15,BS_BITMAP | BS_CENTER | 
+                    BS_VCENTER
+    PUSHBUTTON      "",IDC_BTN_ADD,173,14,16,15,BS_BITMAP | BS_CENTER | 
+                    BS_VCENTER
+    PUSHBUTTON      "",IDC_BTN_REMOVE,196,14,16,15,BS_BITMAP | BS_CENTER | 
+                    BS_VCENTER
+    PUSHBUTTON      "",IDC_BTN_UP,219,14,16,15,BS_BITMAP | BS_CENTER | 
+                    BS_VCENTER
+    PUSHBUTTON      "",IDC_BTN_DOWN,242,14,16,15,BS_BITMAP | BS_CENTER | 
+                    BS_VCENTER
+    LTEXT           "Список пользователей",IDC_STATIC,13,17,62,8
+END
+
+IDD_USER_ERGO DIALOG DISCARDABLE  0, 0, 298, 166
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Эргономика"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Сохранение текущих опций при выходе",IDC_CHECK_OPTSAVE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,74,70,149,10
+    CONTROL         "Восстановление опций при старте",IDC_CHECK_OPTLOAD,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,74,85,133,10
+    CONTROL         158,IDC_STATIC,"Static",SS_BITMAP,221,11,64,60
+END
+
+IDD_USER_ACESS DIALOG DISCARDABLE  0, 0, 298, 166
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Доступ"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT_PASSNUMB,91,39,31,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_PASS,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,131,39,11,
+                    14
+    COMBOBOX        IDC_COMBO_ALHO,31,103,65,51,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Использовать",IDC_CHECK_USE_CODING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,103,104,65,10
+    EDITTEXT        IDC_EDIT_KEY,45,121,59,14,ES_AUTOHSCROLL
+    CONTROL         158,IDC_STATIC,"Static",SS_BITMAP,221,11,64,60
+    LTEXT           "Число попыток ввода пароля",IDC_STATIC,23,28,101,8
+    GROUPBOX        "Вход в пакет",IDC_STATIC,17,17,112,44
+    GROUPBOX        "Защита системных файлов",IDC_STATIC,17,81,153,66
+    LTEXT           "Алгоритм шифрования",IDC_STATIC,23,91,78,8
+    LTEXT           "Ключ",IDC_STATIC,23,124,18,8
+END
+
+IDD_DLG_EXPERTNAME DIALOGEX 0, 0, 240, 59
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME | WS_EX_CONTEXTHELP
+CAPTION "Название экспертной системы"
+CLASS "BorDlg_Gray"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_ED_NAME,11,10,217,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Дальше",IDOK,39,34,50,14,BS_CENTER
+    PUSHBUTTON      "Отмена",IDCANCEL,151,34,50,14,BS_CENTER
+END
+
+IDD_DLG_FOLDER DIALOGEX 0, 0, 297, 185
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME | WS_EX_CONTEXTHELP
+CAPTION "Выбор папки"
+CLASS "BorDlg_Gray"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_PATH,29,141,259,12
+    CONTROL         "",IDC_LIST_DIR,"SysListView32",LVS_SINGLESEL | 
+                    LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_AUTOARRANGE | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,22,282,110
+    PUSHBUTTON      "Выбрать",ID_BTN_UP,171,8,17,12,BS_BITMAP | BS_CENTER
+    CONTROL         "Список",IDC_RAD_LIST,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,199,9,43,12
+    CONTROL         "Иконки",IDC_RAD_ICO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,248,9,43,12
+    PUSHBUTTON      "Выбрать",IDOK,64,165,50,14,BS_CENTER | WS_GROUP
+    PUSHBUTTON      "Отмена",IDCANCEL,182,165,50,14,BS_CENTER
+    COMBOBOX        IDC_COMBO_DRIVE,103,7,62,65,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Диски",ID_TXT_FOLDER1,71,9,24,8,NOT WS_GROUP
+    LTEXT           "Папки",ID_TXT_FOLDER2,7,12,28,8,NOT WS_GROUP
+    LTEXT           "Путь",ID_TXT_FOLDER,7,143,21,8,NOT WS_GROUP
+    CONTROL         "",IDC_BORSHADE1,"BorShade",0x8006,3,5,291,154
+END
+
+IDD_MYOPENADD DIALOGEX 0, 0, 271, 42
+STYLE DS_3DLOOK | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CAPTION | 
+    WS_SYSMENU
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_NAME,1,25,268,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER,WS_EX_STATICEDGE
+    CTEXT           "Экспертная система:",IDC_STATIC_ES,34,14,234,8
+    ICON            IDR_MAINFRAME,IDR_MAINFRAME,6,1,20,20
+END
+
+IDD_DLG_ACC DIALOGEX 0, 0, 392, 215
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME | WS_EX_CONTEXTHELP
+CAPTION "Доступ к объекту"
+CLASS "BorDlg_Gray"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tree1",IDC_LIST_USERS,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,9,19,160,138
+    LISTBOX         IDC_LIST_ACC,197,19,160,138,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Add",IDC_BTN_ADD,168,46,26,22,BS_BITMAP | BS_CENTER
+    PUSHBUTTON      "&Remove",IDC_BTN_REMOVE,170,109,23,21,BS_BITMAP | 
+                    BS_CENTER
+    EDITTEXT        IDC_ED_OWNER,11,196,143,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "&SetOwn",IDC_BTN_SETOWNER,92,171,19,22,BS_BITMAP | 
+                    BS_CENTER
+    CONTROL         "Button7",IDOK,"BorBtn",WS_TABSTOP | 0x1,227,177,43,25
+    CONTROL         "Button8",IDCANCEL,"BorBtn",WS_TABSTOP,337,177,43,25
+    CONTROL         "Э",IDC_CHECK_EXP2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    360,24,22,12
+    CONTROL         "К",IDC_CHECK_KOG2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    360,37,22,12
+    CONTROL         "П",IDC_CHECK_US2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    360,50,22,12
+    LTEXT           "Список всех пользователей системы",ID_STAT_US,9,8,134,8,
+                    NOT WS_GROUP
+    LTEXT           "Список расширения доступа к объекту",ID_LST_OWN,197,8,
+                    138,8,NOT WS_GROUP
+    LTEXT           "Хозяин объекта",ID_STAT_TTLLOWN,11,187,59,8,NOT 
+                    WS_GROUP
+    CONTROL         "",IDC_BORSHADE2,"BorShade",WS_GROUP | 0x8006,3,166,386,
+                    47
+    CONTROL         "",IDC_BORSHADE1,"BorShade",WS_GROUP | 0x8006,3,2,386,
+                    161
+END
+
+IDD_DLG_PASSW DIALOGEX 0, 0, 231, 68
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME | WS_EX_CONTEXTHELP
+CAPTION "Вход в Visual Expert"
+CLASS "BorDlg_Gray"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_ED_PASSW,72,34,97,12,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "&Cancel",IDCANCEL,"BorBtn",WS_TABSTOP,180,6,43,25
+    CONTROL         "&Ok",IDOK,"BorBtn",WS_TABSTOP,180,36,43,25
+    CONTROL         "",IDC_BORSHADE2,"BorShade",WS_GROUP | 0x8006,173,2,56,
+                    64
+    CONTROL         159,IDC_STATIC,"Static",SS_BITMAP,3,4,64,60,
+                    WS_EX_TRANSPARENT
+    LTEXT           "Введите пароль:",IDC_STATIC,88,22,58,8,NOT WS_GROUP
+END
+
+IDD_DLG_DLGBARH DIALOG DISCARDABLE  0, 0, 307, 25
+STYLE DS_3DLOOK | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_DLG_DLGBARV DIALOG DISCARDABLE  0, 0, 28, 231
+STYLE DS_3DLOOK | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_DLG_WHATCREATE DIALOGEX 0, 0, 173, 127
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME | WS_EX_CONTEXTHELP
+CAPTION "Создать"
+CLASS "BorDlg_Gray"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Продукционную базу правил",IDC_RAD_RULES,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,29,6,114,12
+    CONTROL         "Базу фактов",IDC_RAD_FAC,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,29,23,60,12
+    CONTROL         "Базу вопросов",IDC_RAD_Q,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,29,40,67,12
+    EDITTEXT        IDC_ED_NAME,15,65,143,12,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "Button7",IDOK,"BorBtn",WS_TABSTOP | 0x1,25,91,43,25
+    CONTROL         "Button8",IDCANCEL,"BorBtn",WS_TABSTOP,104,91,43,25
+    CONTROL         "",IDC_BORSHADE1,"BorShade",WS_GROUP | 0x8006,5,84,162,
+                    38
+    CONTROL         "",IDC_BORSHADE2,"BorShade",WS_GROUP | 0x8006,5,3,162,78
+    LTEXT           "Название объекта (комментарий)",-1,16,55,133,8,NOT 
+                    WS_GROUP
+END
+
+IDD_CALC DIALOGEX 0, 0, 273, 171
+STYLE DS_3DLOOK | DS_CONTEXTHELP | WS_VISIBLE | WS_CLIPSIBLINGS | 
+    WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Калькулятор"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT,7,103,257,14,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST,7,7,257,86,LBS_OWNERDRAWVARIABLE | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP,WS_EX_CLIENTEDGE | WS_EX_RIGHT
+    PUSHBUTTON      "Очистить",IDC_CALC_CLEARSCR,9,125,32,29,BS_BITMAP
+    CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    WS_TABSTOP,77,138,100,21
+    DEFPUSHBUTTON   "Считать",IDC_COUNT,185,125,32,29,BS_BITMAP
+    PUSHBUTTON      "Закрыть",IDCANCEL,232,125,32,29,BS_BITMAP
+    ICON            IDI_ICON_CALC,IDC_STATIC,49,130,20,20
+    LTEXT           "Точность",IDC_STATIC,81,128,32,8
+    LTEXT           "1",IDC_STATIC,85,160,8,8
+    LTEXT           "17",IDC_STATIC,167,160,9,8
+    CONTROL         "Н",IDC_RAD_NORMAL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,114,123,21,10
+    CONTROL         "Ф",IDC_RAD_FIXED,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,136,123,23,10
+    CONTROL         "С",IDC_RAD_SCIENC,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,160,123,21,10
+END
+
+IDD_TIMER DIALOG DISCARDABLE  0, 0, 273, 193
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Будильник"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_MESSAGE,10,27,255,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_HOURS,191,49,34,122,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MINUTES,232,49,33,123,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_EVENTLIST,191,64,74,60,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Добавить",IDC_ADD,215,129,50,14
+    PUSHBUTTON      "Удалить",IDC_DELETE,215,150,50,14,WS_DISABLED
+    PUSHBUTTON      "Закрыть",IDCANCEL,215,171,50,14
+    CONTROL         "",IDC_CALENDAR,"{8E27C92B-1264-101C-8A2F-040224009C02}",
+                    WS_TABSTOP,7,46,181,145
+    LTEXT           ":",IDC_STATIC,228,51,4,8
+    LTEXT           "Введите текст сообщения и время когда это сообщение должно появиться на экране:",
+                    IDC_STATIC,8,7,257,18
+END
+
+IDD_NODENAME DIALOG DISCARDABLE  0, 0, 167, 62
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Новое имя"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,49,41,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,110,41,50,14
+    LTEXT           "Введите новое имя:",IDC_STATIC,7,7,114,9
+    EDITTEXT        IDC_NODENAME,7,19,153,14,ES_AUTOHSCROLL
+END
+
+IDD_DLG_ASK DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Присвоить значение переменной"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT_VAL,9,41,166,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NAME,9,11,166,14,ES_AUTOHSCROLL | WS_DISABLED
+    DEFPUSHBUTTON   "Присвоить",IDOK,16,71,61,14
+    PUSHBUTTON      "Отменить",IDCANCEL,107,71,61,14
+    LTEXT           "Имя переменной",IDC_STATIC,9,2,59,8
+    LTEXT           "Значение",IDC_STATIC,9,32,33,8
+END
+
+IDD_DLG_STA DIALOGEX 0, 0, 238, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Запрос"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST_Q,7,5,144,84,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP,WS_EX_DLGMODALFRAME
+    DEFPUSHBUTTON   "Начать вывод",IDOK,166,11,58,20
+    DEFPUSHBUTTON   "Отменить",IDCANCEL,166,43,58,20
+    CONTROL         "Удалять правила",IDC_CHECK_REM,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,158,74,75,10
+END
+
+IDD_DLG_ASKWORK DIALOG DISCARDABLE  0, 0, 186, 103
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Задать значение переменной"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT_NAME,9,11,166,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT_VAL,9,41,166,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_KD,12,78,39,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Присвоить",IDOK,114,63,61,14
+    PUSHBUTTON      "Отменить",IDCANCEL,114,84,61,14
+    LTEXT           "Имя переменной",IDC_STATIC,9,2,59,8
+    LTEXT           "Значение",IDC_STATIC,9,32,33,8
+    LTEXT           "Коэффициент доверия",IDC_STATIC,12,69,78,8
+END
+
+IDD_QUESTION DIALOG DISCARDABLE  0, 0, 275, 47
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Задать вопрос"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Задать",IDOK,161,26,50,14
+    PUSHBUTTON      "Выйти",IDCANCEL,218,26,50,14
+    COMBOBOX        IDC_QUESTION,7,7,70,79,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_LINE,86,7,87,81,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_NODE,181,7,87,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_DLG_ERGONOMIC DIALOGEX 0, 0, 267, 181
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Эргономика"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST_CAT,8,15,90,90,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_ITEM,111,15,90,90,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_BK,124,135,61,70,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO_F,191,135,61,70,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Шрифит",IDC_BTN_FNT,163,155,50,14
+    DEFPUSHBUTTON   "Применить",IDOK,210,31,50,20
+    PUSHBUTTON      "Отменить",IDCANCEL,210,67,50,20
+    LTEXT           "Категория",IDC_STATIC,8,4,36,8
+    LTEXT           "Раздел",IDC_STATIC,111,4,26,8
+    CTEXT           "Пример",IDC_STATIC_SAMPL,13,135,100,25,WS_BORDER,
+                    WS_EX_CLIENTEDGE
+    GROUPBOX        "Паретры",IDC_STATIC,6,114,254,61
+    LTEXT           "Фон",IDC_STATIC,124,125,16,8
+    LTEXT           "Передний план",IDC_STATIC,191,125,52,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_TIMER DLGINIT
+BEGIN
+    IDC_HOURS, 0x403, 3, 0
+0x3030, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3130, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3230, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3330, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3430, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3530, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3630, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3730, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3830, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3930, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3131, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3231, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3331, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3431, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3531, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3631, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3731, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3831, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3931, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3032, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3132, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3232, "\000" 
+    IDC_HOURS, 0x403, 3, 0
+0x3332, "\000" 
+    IDC_MINUTES, 0x403, 3, 0
+0x3030, "\000" 
+    IDC_MINUTES, 0x403, 3, 0
+0x3530, "\000" 
+    IDC_MINUTES, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_MINUTES, 0x403, 3, 0
+0x3531, "\000" 
+    IDC_MINUTES, 0x403, 3, 0
+0x3032, "\000" 
+    IDC_MINUTES, 0x403, 3, 0
+0x3532, "\000" 
+    IDC_MINUTES, 0x403, 3, 0
+0x3033, "\000" 
+    IDC_MINUTES, 0x403, 3, 0
+0x3533, "\000" 
+    IDC_MINUTES, 0x403, 3, 0
+0x3034, "\000" 
+    IDC_MINUTES, 0x403, 3, 0
+0x3534, "\000" 
+    IDC_MINUTES, 0x403, 3, 0
+0x3035, "\000" 
+    IDC_MINUTES, 0x403, 3, 0
+0x3535, "\000" 
+    IDC_CALENDAR, 0x37a, 419, 0
+0x0000, 0x0000, 0x0023, 0x0000, 0x0001, 0x0000, 0x001b, 0x0000, 0x0001, 
+0x8001, 0x0000, 0x000c, 0x0000, 0x000c, 0x0000, 0x0002, 0x8001, 0x0001, 
+0x0000, 0x0000, 0x0800, 0x1d00, 0x001c, 0x6400, 0x0018, 0xce00, 0x0207, 
+0x0100, 0x0f00, 0x0000, 0x0080, 0x0000, 0x0000, 0xa000, 0x1000, 0x0000, 
+0x0080, 0xa000, 0x0100, 0x0200, 0x0000, 0x0000, 0x0100, 0x0000, 0x0100, 
+0x0000, 0x0100, 0x0000, 0x0100, 0x0000, 0x0100, 0x0000, 0x0100, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0100, 0x00cc, 0xbc00, 0x4402, 0x0142, 
+0x0500, 0x7241, 0x6169, 0x016c, 0x00cc, 0xbc00, 0x4402, 0x0142, 0x0500, 
+0x7241, 0x6169, 0x016c, 0x00cc, 0xbc00, 0xc002, 0x01d4, 0x0500, 0x7241, 
+0x6169, 0x006c, "\240" 
+    0
+END
+
+IDD_QUESTION DLGINIT
+BEGIN
+    IDC_QUESTION, 0x403, 4, 0
+0xf2d7, 0x00ee, 
+    IDC_QUESTION, 0x403, 4, 0
+0xe4c3, 0x00e5, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_FORM_EXPERT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 383
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_ACESSLVL, DIALOG
+    BEGIN
+        RIGHTMARGIN, 246
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_PROP_USER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 167
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_PROP_ADM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+
+    IDD_PROP_EXPERT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 167
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_PROP_KOGNIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 167
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_USER_USER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 291
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_USER_ERGO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 291
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_USER_ACESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 291
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_DLG_DLGBARH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 300
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 18
+    END
+
+    IDD_DLG_DLGBARV, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 21
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 224
+    END
+
+    IDD_DLG_WHATCREATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 157
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_DLG_ASK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_DLG_STA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 231
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_DLG_ASKWORK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_DLG_ERGONOMIC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 260
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 174
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_ACESS               BITMAP  DISCARDABLE     "rc\\acess.bmp"
+IDB_NEW                 BITMAP  DISCARDABLE     "rc\\new.bmp"
+IDB_OPEN                BITMAP  DISCARDABLE     "rc\\open.bmp"
+IDB_SAVE                BITMAP  DISCARDABLE     "rc\\save.bmp"
+IDB_CLOSE               BITMAP  DISCARDABLE     "rc\\close.bmp"
+IDB_WINDOW              BITMAP  DISCARDABLE     "rc\\window.bmp"
+IDB_EXIT                BITMAP  DISCARDABLE     "rc\\exit.bmp"
+IDB_ABOUT               BITMAP  DISCARDABLE     "rc\\about.bmp"
+IDB_HELP                BITMAP  DISCARDABLE     "rc\\help.bmp"
+IDB_VE                  BITMAP  DISCARDABLE     "rc\\yes.bmp"
+IDB_YES_EMBOSS          BITMAP  DISCARDABLE     "RC\\Yes_emb.bmp"
+IDB_M_NEW               BITMAP  DISCARDABLE     "rc\\m_new.bmp"
+IDB_M_OPEN              BITMAP  DISCARDABLE     "rc\\m_open.bmp"
+IDB_M_SAVE              BITMAP  DISCARDABLE     "rc\\m_save.bmp"
+IDB_M_HORIZ             BITMAP  DISCARDABLE     "rc\\m_horiz.bmp"
+IDB_M_VERT              BITMAP  DISCARDABLE     "rc\\m_vert.bmp"
+IDB_M_NEXT              BITMAP  DISCARDABLE     "rc\\bitmap9.bmp"
+IDB_M_PRIV              BITMAP  DISCARDABLE     "rc\\priv.bmp"
+IDB_BTN_REMOVE          BITMAP  DISCARDABLE     "rc\\btn_remo.bmp"
+IDB_BTN_UP              BITMAP  DISCARDABLE     "rc\\up.bmp"
+IDB_BTN_DOWN            BITMAP  DISCARDABLE     "rc\\btn_down.bmp"
+IDB_BTN_ADD             BITMAP  DISCARDABLE     "rc\\add.bmp"
+IDB_BTN_UPDATE          BITMAP  DISCARDABLE     "rc\\update.bmp"
+IDB_FOLD_NORMAL         BITMAP  DISCARDABLE     "rc\\fold_nor.bmp"
+IDB_FOLD_SMALL          BITMAP  DISCARDABLE     "rc\\fold_sma.bmp"
+IDB_BTN_DIRUP           BITMAP  DISCARDABLE     "rc\\btn_diru.bmp"
+IDB_FOLD_NORMAL_D       BITMAP  DISCARDABLE     "rc\\fn_d.bmp"
+IDB_FOLD_SMALL_D        BITMAP  DISCARDABLE     "rc\\fns_d.bmp"
+IDB_BMP_CALC            BITMAP  DISCARDABLE     "rc\\bmp_calc.bmp"
+IDB_BMP_CLOCK           BITMAP  DISCARDABLE     "rc\\bmp_cloc.bmp"
+IDB_BMP_CLOCKL          BITMAP  DISCARDABLE     "rc\\bitm_clo.bmp"
+IDB_BTN_SETOWNER        BITMAP  DISCARDABLE     "rc\\btn_seto.bmp"
+IDB_BTN_ADDUSER         BITMAP  DISCARDABLE     "rc\\btn_addu.bmp"
+IDB_BTN_REMOVEUSER      BITMAP  DISCARDABLE     "rc\\bmp_rmus.bmp"
+IDB_BMP_EXP_NEW         BITMAP  DISCARDABLE     "rc\\bmp_exp_.bmp"
+IDB_BMP_EXP_EXP         BITMAP  DISCARDABLE     "rc\\bmpee.bmp"
+IDB_BMP_EXP_REMOV       BITMAP  DISCARDABLE     "rc\\bmp00001.bmp"
+IDB_BMP_EXP_MARK        BITMAP  DISCARDABLE     "rc\\bmp_em.bmp"
+IDB_BMP_EXP_EDIT        BITMAP  DISCARDABLE     "rc\\bmp_ed.bmp"
+IDB_BMP_EXP_CLEAR       BITMAP  DISCARDABLE     "rc\\bmp_cl.bmp"
+IDB_BMP_EXP_CLEARALL    BITMAP  DISCARDABLE     "rc\\bmp_CLA.bmp"
+IDB_BMP_EXP_ACC         BITMAP  DISCARDABLE     "rc\\bmp_eac.bmp"
+IDB_BMP_EXP_CONSULT     BITMAP  DISCARDABLE     "rc\\bitmap10.bmp"
+IDB_BMP_EXP_MAKERULES   BITMAP  DISCARDABLE     "rc\\mkrul.bmp"
+IDB_BMP_EXP_COMPILE     BITMAP  DISCARDABLE     "rc\\compile.bmp"
+IDB_BMP_EXP_OPT         BITMAP  DISCARDABLE     "rc\\expopt.bmp"
+IDB_TREE_RUL            BITMAP  DISCARDABLE     "rc\\tree_rul.bmp"
+IDB_TREE_RULC           BITMAP  DISCARDABLE     "rc\\trulc.bmp"
+IDB_TREE_FAC            BITMAP  DISCARDABLE     "rc\\tree_fac.bmp"
+IDB_TREE_FACC           BITMAP  DISCARDABLE     "rc\\trfacc.bmp"
+IDB_TREE_Q              BITMAP  DISCARDABLE     "rc\\tree_q.bmp"
+IDB_TREE_QC             BITMAP  DISCARDABLE     "rc\\tree_qc.bmp"
+IDB_TREE_ROOT           BITMAP  DISCARDABLE     "rc\\tree_roo.bmp"
+IDB_BMP_RUL_ADD         BITMAP  DISCARDABLE     "rc\\bmp_rul_.bmp"
+IDB_BMP_RUL_LABEL       BITMAP  DISCARDABLE     "rc\\rlbl.bmp"
+IDB_BMP_RUL_SEARCH      BITMAP  DISCARDABLE     "rc\\rusrch.bmp"
+IDB_BMP_RUL_EXIT        BITMAP  DISCARDABLE     "rc\\brulex.bmp"
+IDB_BMP_NET_SAVE        BITMAP  DISCARDABLE     "rc\\bmp_net_.bmp"
+IDB_BMP_NET_ZOOMPL      BITMAP  DISCARDABLE     "rc\\zoompl.bmp"
+IDB_BMP_NET_ZOOMMI      BITMAP  DISCARDABLE     "rc\\netzmi.bmp"
+IDB_BMP_NET_NEWNODE     BITMAP  DISCARDABLE     "rc\\newnod.bmp"
+IDB_BMP_NET_NEWADGE     BITMAP  DISCARDABLE     "rc\\newa.bmp"
+IDB_BMP_NET_ERASE       BITMAP  DISCARDABLE     "rc\\bmerase.bmp"
+IDB_BMP_NET_MOVE        BITMAP  DISCARDABLE     "rc\\bmmov.bmp"
+IDB_BMP_NET_SELECT      BITMAP  DISCARDABLE     "rc\\bmsel.bmp"
+IDB_BMP_RUL_ERS         BITMAP  DISCARDABLE     "rc\\brers.bmp"
+IDB_BMP_CALC_YES        BITMAP  DISCARDABLE     "rc\\cyes.bmp"
+IDB_BMP_CALC_CANCEL     BITMAP  DISCARDABLE     "rc\\ccanc.bmp"
+IDB_BMP_CALC_SCR        BITMAP  DISCARDABLE     "rc\\cscr.bmp"
+IDB_BMP_WRK_ASK         BITMAP  DISCARDABLE     "rc\\bmp_wrk_.bmp"
+IDB_BMP_WRK_STOP        BITMAP  DISCARDABLE     "rc\\wstop.bmp"
+IDB_BMP_WRK_STEPMODE    BITMAP  DISCARDABLE     "rc\\wsm.bmp"
+IDB_BMP_WRK_STEP        BITMAP  DISCARDABLE     "rc\\wstep.bmp"
+IDB_BMP_LSPATTERN       BITMAP  DISCARDABLE     "rc\\bmp_lspa.bmp"
+IDB_BMP_WRK_ANIMATE     BITMAP  DISCARDABLE     "rc\\wanm.bmp"
+IDB_WRK_FACH            BITMAP  DISCARDABLE     "rc\\wrk_fach.bmp"
+IDB_WRK_FACM            BITMAP  DISCARDABLE     "rc\\wrk_facm.bmp"
+IDB_WRK_FACL            BITMAP  DISCARDABLE     "rc\\wrk_facl.bmp"
+IDB_WRK_RULH            BITMAP  DISCARDABLE     "rc\\wrk_rulh.bmp"
+IDB_WRK_RULM            BITMAP  DISCARDABLE     "rc\\wrk_rulm.bmp"
+IDB_WRK_RULL            BITMAP  DISCARDABLE     "rc\\wrk_rull.bmp"
+IDB_RES_RULH            BITMAP  DISCARDABLE     "rc\\res_rulh.bmp"
+IDB_RES_RULM            BITMAP  DISCARDABLE     "rc\\res_rulm.bmp"
+IDB_RES_RULL            BITMAP  DISCARDABLE     "rc\\res_rull.bmp"
+IDB_BMP_WRK_EMPTY       BITMAP  DISCARDABLE     "rc\\wemot.bmp"
+IDB_BMP_WRK_PRINT       BITMAP  DISCARDABLE     "rc\\wrkpr.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENUEX DISCARDABLE 
+BEGIN
+    POPUP "Файл/&F",                        65535,MFT_STRING,MFS_ENABLED
+    BEGIN
+        MENUITEM "Новая Экспертная Система/&N\tCtrl+N", 57600,MFT_STRING,
+        MFS_ENABLED
+        MENUITEM "Открыть/&O...\tF3",           57601,MFT_STRING,MFS_ENABLED
+        MENUITEM "Сохранить/&S...\tF2",         57604,MFT_STRING,MFS_ENABLED
+        MENUITEM "Закрыть/&C\tAlt+F3",          57602,MFT_STRING,MFS_ENABLED
+        MENUITEM MFT_SEPARATOR
+        MENUITEM "Последние ЭС",                57616,MFT_STRING,MFS_GRAYED
+        MENUITEM MFT_SEPARATOR
+        MENUITEM "Выход/&X\tAlt+X",             57665,MFT_STRING,MFS_ENABLED
+    END
+    POPUP "Администрирование/&A",           65535,MFT_STRING,MFS_ENABLED
+    BEGIN
+        MENUITEM "Изменить уровень доступа/&C...\tCtrl+A", 10,MFT_STRING,
+        MFS_ENABLED
+        MENUITEM "Текущий уровень доступа\tCtrl+L", 40046,MFT_STRING,
+        MFS_ENABLED
+        MENUITEM MFT_SEPARATOR
+        MENUITEM "Администратор/&A...",         11,MFT_STRING,MFS_ENABLED
+    END
+    POPUP "Окна Экспертных Систем/&W",      65535,MFT_STRING,MFS_ENABLED
+    BEGIN
+        MENUITEM "Каскад/&C\tCtrl+C",           57650,MFT_STRING,MFS_ENABLED
+        MENUITEM "Мозаика горизонтальная/&T\tCtrl+H", 57651,MFT_STRING,
+        MFS_ENABLED
+        MENUITEM "Мозаика вертикальная/&V\tCtrl+V", 57652,MFT_STRING,
+        MFS_ENABLED
+        MENUITEM "Упорядочить\tCtrl+R",         57649,MFT_STRING,MFS_ENABLED
+        MENUITEM "Закрыть всё/&A",              13,MFT_STRING,MFS_ENABLED
+        MENUITEM MFT_SEPARATOR
+        MENUITEM "Следующее окно/&N\tF6",       40043,MFT_STRING,MFS_ENABLED
+        MENUITEM "Предидущее окно/&P\tShift+F6", 40044,MFT_STRING,
+        MFS_ENABLED
+    END
+    POPUP "Помощь/&H",                      65535,
+    MFT_STRING | MFT_RIGHTORDER | MFT_RIGHTJUSTIFY,MFS_ENABLED
+    BEGIN
+        MENUITEM "Темы справки/&H",             57667,MFT_STRING,MFS_ENABLED
+        MENUITEM MFT_SEPARATOR
+        MENUITEM "Реквизиты пакета/&A",         5001,MFT_STRING,MFS_ENABLED
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS DISCARDABLE 
+BEGIN
+    "A",            ID_ACESS,               VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_WINDOW_CASCADE,      VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_FILE_CLOSE,          VIRTKEY, ALT, NOINVERT
+    "E",            ID_APP_EXIT,            VIRTKEY, ALT, NOINVERT
+    "H",            ID_WINDOW_TILE_HORZ,    VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_HELP,                VIRTKEY, ALT, NOINVERT
+    "L",            ID_ACESS_CURRENT,       VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, ALT, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, ALT, NOINVERT
+    "R",            ID_WINDOW_ARRANGE,      VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE_AS,        VIRTKEY, ALT, NOINVERT
+    "V",            ID_WINDOW_TILE_VERT,    VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_FILE_SAVE_AS,        VIRTKEY, NOINVERT
+    VK_F3,          ID_FILE_OPEN,           VIRTKEY, NOINVERT
+    VK_F3,          ID_FILE_CLOSE,          VIRTKEY, ALT, NOINVERT
+    VK_F6,          ID_WINDOW_NEXT,         VIRTKEY, NOINVERT
+    VK_F6,          ID_WINDOW_PRIV,         VIRTKEY, SHIFT, NOINVERT
+    "W",            ID_ACCEL40050,          VIRTKEY, ALT, NOINVERT
+    "W",            ID_APP_WINDOW,          VIRTKEY, ALT, NOINVERT
+    "X",            ID_APP_EXIT,            VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// BITMAP256
+//
+
+IDB_DIB_ABOUT256        BITMAP256 DISCARDABLE   "RC\\about256.img"
+IDB_DIB_BKGNDH          BITMAP256 DISCARDABLE   "RC\\Bkgnd_h.bmp"
+IDB_DIB_BKGNDV          BITMAP256 DISCARDABLE   "RC\\Bkgnd_v.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_CALC           ICON    DISCARDABLE     "rc\\icon_cal.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_HIDE            "&Скрыть"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDP_NO_ERROR_AVAILABLE "Недоступны сообщения об ошибках."
+    AFX_IDS_NOT_SUPPORTED_EXCEPTION "Вызвана неподдерживаемая операция."
+    AFX_IDS_RESOURCE_EXCEPTION "Требуемый рессурс недоступен."
+    AFX_IDS_MEMORY_EXCEPTION "Не хватает памяти."
+    AFX_IDS_USER_EXCEPTION  "Неизвестная ошибка."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_OPENFILE        "Открыть экспертную систему"
+    AFX_IDS_SAVEFILE        "Сохранить экспертную систему"
+    AFX_IDS_ALLFILTER       "Все файлы (*.*)"
+    AFX_IDS_UNTITLED        "Неименованный"
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+    AFX_IDS_UNNAMED_FILE    "неименованный файл"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDP_INVALID_FILENAME "Ошибочное имя файла."
+    AFX_IDP_FAILED_TO_OPEN_DOC "Ошибка открытия документа."
+    AFX_IDP_FAILED_TO_SAVE_DOC "Ошибка записи документа."
+    AFX_IDP_ASK_TO_SAVE     "Сохранить изменения в %1?"
+    AFX_IDP_FAILED_TO_CREATE_DOC "Ошибка создания пустого документа."
+    AFX_IDP_FILE_TOO_LARGE  "Этот файл слишком большой для открытия."
+    AFX_IDP_FAILED_TO_START_PRINT "Невозможно начать пачать."
+    AFX_IDP_FAILED_TO_LAUNCH_HELP "Ошибка запуска помощи."
+    AFX_IDP_INTERNAL_FAILURE "Внутренняя ошибка приложения."
+    AFX_IDP_COMMAND_FAILURE "Команда не выполнена."
+    AFX_IDP_FAILED_MEMORY_ALLOC "Мало памяти для выполнения операции."
+    AFX_IDP_UNREG_DONE      "Записи реестра удалены и INI был стёрт."
+    AFX_IDP_UNREG_FAILURE   "Не все записи реестра (или INI файла) были удалены."
+    AFX_IDP_DLL_LOAD_FAILED "Эта программа требует файл %s, который не найден"
+    AFX_IDP_DLL_BAD_VERSION "This program is linked to the missing export %s in the file %s. This machine may have an incompatible version of %s."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDP_FAILED_TO_NOTIFY 
+                            "%1\nНевожно зарегистрировать документ.\nДокумент может уже быть открыт."
+    AFX_IDP_GET_NOT_SUPPORTED "Нельзя прочесть свойство только для записи."
+    AFX_IDP_SET_NOT_SUPPORTED "Нельзя записать свойство только для чтения."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDP_FAILED_INVALID_FORMAT "Ошибочный формат файла."
+    AFX_IDP_FAILED_INVALID_PATH 
+                            "%1\nНевозможно найти этот файл.\nПроверьте правильность пути и имени файла."
+    AFX_IDP_FAILED_DISK_FULL "Диск назначения полон."
+    AFX_IDP_FAILED_ACCESS_READ 
+                            "Невозможно прочесть с %1, это открыто где-то ещё."
+    AFX_IDP_FAILED_ACCESS_WRITE 
+                            "Невозможно записать в %1, это только для чтения либо открыто где-то ещё."
+    AFX_IDP_FAILED_IO_ERROR_READ "Неизвестная ошибка при чтении %1."
+    AFX_IDP_FAILED_IO_ERROR_WRITE "Неизвестная ошибка при записи %1."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDP_PARSE_INT       "Введите целое."
+    AFX_IDP_PARSE_REAL      "Введите число."
+    AFX_IDP_PARSE_INT_RANGE "Введите целое между %1 и %2."
+    AFX_IDP_PARSE_REAL_RANGE "Введите число между %1 и %2."
+    AFX_IDP_PARSE_STRING_SIZE "Введите не более %1 символов."
+    AFX_IDP_PARSE_RADIO_BUTTON "Выберете кнопку."
+    AFX_IDP_PARSE_BYTE      "Введите целое между 0 и 255."
+    AFX_IDP_PARSE_UINT      "Введите положительное целое."
+    AFX_IDP_PARSE_DATETIME  "Введите дату и/или время."
+    AFX_IDP_PARSE_CURRENCY  "Введите валюту."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PASTELINKEDTYPE "Связан %s"
+    AFX_IDS_UNKNOWNTYPE     "Неизвестный тип"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDP_FILE_NONE       "Ошибок нет."
+    AFX_IDP_FILE_GENERIC    "Неизвестная ошибка произошла во время доступа к файлу %1."
+    AFX_IDP_FILE_NOT_FOUND  "%1 файл не найден."
+    AFX_IDP_FILE_BAD_PATH   "%1 содержит неверный путь."
+    AFX_IDP_FILE_TOO_MANY_OPEN 
+                            "%1 нельзя открыть так как уже открыто много файлов."
+    AFX_IDP_FILE_ACCESS_DENIED "Доступ к %1 провалился."
+    AFX_IDP_FILE_INVALID_FILE "Ршибочный идентификатор файла связан с %1."
+    AFX_IDP_FILE_REMOVE_CURRENT 
+                            "%1 невозможно удалить так как это текущий каталог."
+    AFX_IDP_FILE_DIR_FULL   "%1 нельзя создать так как каталог полон."
+    AFX_IDP_FILE_BAD_SEEK   "Позиционирование провалилось %1"
+    AFX_IDP_FILE_HARD_IO    "Аппаратная ошибка произошла во время доступа к %1."
+    AFX_IDP_FILE_SHARING    "Ошибка разделения доступа произошла для %1."
+    AFX_IDP_FILE_LOCKING    "Ошибка блокировки доступа произошла для %1."
+    AFX_IDP_FILE_DISKFULL   "Диск переполнился во время доступа к %1."
+    AFX_IDP_FILE_EOF        "Недопустимый доступ к %1 - достигнут конец."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDP_ARCH_NONE       "Нет ошибок."
+    AFX_IDP_ARCH_GENERIC    "Неизвестная ошибка произошла во время доступа к %1."
+    AFX_IDP_ARCH_READONLY   "Попытка записи во архив для чтения %1."
+    AFX_IDP_ARCH_ENDOFFILE  "Недопустимый доступ к %1 - достигнут конец."
+    AFX_IDP_ARCH_WRITEONLY  "Нельзя читать из архива только для записи %1."
+    AFX_IDP_ARCH_BADINDEX   "%1 имеет неверный формат."
+    AFX_IDP_ARCH_BADCLASS   "%1 содержит неизвестный объект."
+    AFX_IDP_ARCH_BADSCHEMA  "%1 ошибочная схема."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDP_FAILED_MAPI_LOAD "Unable to load mail system support."
+    AFX_IDP_INVALID_MAPI_DLL "Mail system DLL is invalid."
+    AFX_IDP_FAILED_MAPI_SEND "Send Mail failed to send message."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_OCC_SCALEUNITS_PIXELS "pixels"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OLE_INSERT_NEW       "Insert new embedded object\nNew Object"
+    ID_OLE_EDIT_LINKS       "Edit linked objects\nEdit Links"
+    ID_OLE_EDIT_CONVERT     "Convert selected object between types\nConvert Object"
+    ID_OLE_EDIT_CHANGE_ICON "Change icon of selected object\nChange Icon"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    57872                   "Activate embedded or linked object"
+    57873                   "Activate embedded or linked object"
+    57874                   "Activate embedded or linked object"
+    57875                   "Activate embedded or linked object"
+    57876                   "Activate embedded or linked object"
+    57877                   "Activate embedded or linked object"
+    57878                   "Activate embedded or linked object"
+    57879                   "Activate embedded or linked object"
+    57880                   "Activate embedded or linked object"
+    57881                   "Activate embedded or linked object"
+    57882                   "Activate embedded or linked object"
+    57883                   "Activate embedded or linked object"
+    57884                   "Activate embedded or linked object"
+    57885                   "Activate embedded or linked object"
+    57886                   "Activate embedded or linked object"
+    57887                   "Activate embedded or linked object"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_RECORD_FIRST         "Move to first record\nFirst Record"
+    ID_RECORD_LAST          "Move to final record\nLast Record"
+    ID_RECORD_NEXT          "Move to next record\nNext Record"
+    ID_RECORD_PREV          "Move to previous record\nPrevious Record"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Изменение размеров окна"
+    AFX_IDS_SCMOVE          "Перемещение окна"
+    AFX_IDS_SCMINIMIZE      "Минимизировать окно в иконку"
+    AFX_IDS_SCMAXIMIZE      "Максимизировать окно"
+    AFX_IDS_SCNEXTWINDOW    "Переключиться на окно следующего документа"
+    AFX_IDS_SCPREVWINDOW    "Переключиться на окно предидущего документа"
+    AFX_IDS_SCCLOSE         "Закрыть окно активного документа и запросить запись документов"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Восстановление нормального размера окна"
+    AFX_IDS_SCTASKLIST      "Показать список задач"
+    AFX_IDS_MDICHILD        "Активизировать это окно"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_DESKACCESSORY   "Открыть выбранный раздел"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Создание новой экспертной системы (доступ свободный)\nНовая ЭС"
+    ID_FILE_OPEN            "Открытие Экспертной системы\nОткрытие"
+    ID_FILE_CLOSE           "Закрытие текущей ЭС\nЗакрытие"
+    ID_FILE_SAVE_AS         "Сохранение текущей ЭС\nСохранение"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ACESS                "Изменение прав доступа (при входе 'Анонимный пользователь')\nПрава доступа"
+    ID_USERS                "Настройка пакета администратором"
+    ID_APP_WINDOW           "Менеджер дочерних окон\nМенеджер окон"
+    ID_CLOSE_ALL            "Закрыть все дочерние окна"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_EXIT             "Выход из Visyal Expert\nВыход"
+    ID_HELP_FINDER          "Список доступных тем помощи"
+    ID_CONTEXT_HELP         "Переход в режим выбора объекта для выдачи помощи\nПомощь по объекту"
+    ID_HELP                 "Справка по текущему контексту\nКонтекстная справка"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ERR_NONE             "Нет ошибки"
+    ID_ERR_GENERIC          "Общая ошибка"
+    ID_ERR_READONLY         "Запись в файл открытый только для чтения"
+    ID_ERR_ENDOFFILE        "Неожиданный конец файла при чтении"
+    ID_ERR_WRITEONLY        "Чтение файла открытого только для записи"
+    ID_ERR_BADINDEX         "Не правильный объект"
+    ID_ERR_BADCLASS         "Чтение из файла другой версии объекта"
+    ID_ERR_BADSCHEMA        "Другая версия файла"
+    ID_ERR_UNKNOWN          "Неизвестная ошибка"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Visual Expert\n\nVisual Expert\nФайлы Visual Expert (*.ves)\n.ves\nVES.документ\nVES документ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_CASCADE       "Упорядочить дочерние окна в виде каскада"
+    ID_WINDOW_TILE_HORZ     "Упорядочивание окон в виде горизонтальной мозаики"
+    ID_WINDOW_TILE_VERT     "Упорядочивание окон в виде вертикальной мозаики"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEXT          "Активация следующего дочернего окна"
+    ID_WINDOW_PRIV          "Активация предидущего дочернего окна"
+    ID_ACESS_CURRENT        "Выдаёт информацию об уровне доступа в текущем сеансе"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_GLOBAL_OPT           "Настройка параметров администратором"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Visual Exper"
+    AFX_IDS_IDLEMESSAGE     "Для выхода нажмите 'Alt+X'"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_CM_ABOUT             "Реквизиты пакета Visyal Expert\nРеквизиты"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_ACESS_TO_ES         "Редактирование прав доступа к этой экспертной системе администратором"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ICM_EXP_NEWOBJ          "Создать новый объект экспертной системы (в зависимости от текущего положения курсора)"
+    ICM_EXP_IMPORT          "Подключить к экспертной системе готовый объект"
+    ICM_EXP_REMOVE          "Удалить объект экспертной системы"
+    ICM_EXP_EDIT            "Редактировать выбранный объект"
+    ICM_EXP_CLEAR           "Очистить выделение в текущем списке"
+    ICM_EXP_CLEARALL        "Очистить всё выделение"
+    ICM_EXP_ACC             "Редактирование прав доступа к объекту экспертной системы (только администратор)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ICM_EXP_MAKERULES       "Преобразовать помеченные сети и фреймы в продукционные базы правил"
+    ICM_EXP_COMPILE         "Собрать из помеченных баз правил экспертную систему"
+    ICM_EXP_CONSULT         "Задать вопрос экспертной системе (доступно только после сборки)"
+    ICM_EXP_OPT             "Настройка опций эксплорера экспертных систем"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ICM_NET_SAVE            "Сохранить изменения в файле"
+    ICM_NET_ZOOMPL          "Увеличить изображение сети"
+    ICM_NET_ZOOMMI          "Уменьшение изображение сети"
+    ICM_NET_NEWNODE         "Режим создания новых узлов сети"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ICM_RUL_ADD             "Сохранить изменения"
+    ICM_RUL_DELETE          "Отменить модификацию базы до последнего сохранения"
+    ICM_RUL_LABEL           "Перенумерация записей базы"
+    ICM_RUL_SEARCH          "Найти запись в базе"
+    ICM_RUL_OPT             "Настройка редактора"
+    ICM_RUL_EXIT            "Возврат в эксплорер экспертных систем"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ICM_NET_NEWADGE         "Режим создания новых дуг сети"
+    ICM_NET_ERASE           "Режим удаления объектов сети"
+    ICM_NET_SELECT          "Режим выделения объектов сети"
+    ICM_NET_MOVE            "Режим перемещения объектов сети"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ICM_RUL_ERS             "Удаляет текущую запись из базы"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ICM_WRK_ASK             "Задать вопрос экспертной системе"
+    ICM_WRK_STOP            "Прекратить вывод /Shift+F5"
+    ICM_WRK_STEPMODE        "Включает шаговый режим вывода"
+    ICM_WRK_STEP            "Сделать шаг вывода /F11"
+    ICM_WRK_ANIMATE         "Включает режим анимации вывода"
+    ICM_WRK_PRINT           "Печать результата"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "RC\\vs.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

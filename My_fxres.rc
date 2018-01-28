@@ -1,0 +1,161 @@
+// This is a part of the Microsoft Foundation Classes C++ library.
+// Copyright (C) 1992-1997 Microsoft Corporation
+// All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+//#ifndef __AFXRES_RC__
+//#define __AFXRES_RC__
+
+#ifndef __AFXRES_H__
+	#include <afxres.h>
+#endif
+
+
+//#ifndef _AFXDLL
+
+/////////////////////////////////////////////////////////////////////////////
+// Default resource description for MFC applications
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+// Strings
+
+STRINGTABLE DISCARDABLE
+BEGIN
+#ifndef _AFX_NO_APPMENU_RESOURCES
+	AFX_IDS_OPENFILE,               "Открыть экспертную систему"
+#ifndef _MAC
+	AFX_IDS_SAVEFILE,               "Сохранить экспертгую систему"
+	AFX_IDS_ALLFILTER,              "Все файлы (*.*)"
+	AFX_IDS_UNTITLED,               "Неименованный"
+#else
+	AFX_IDS_SAVEFILE,               "Сохранить документ как:"
+	AFX_IDS_ALLFILTER,              "Все файлы"
+	AFX_IDS_UNTITLED,               "неименованный"
+	AFX_IDS_ABOUT,                  "Реквизиты %1\205"
+#endif
+	AFX_IDS_HIDE,                   "&Скрыть"
+#endif // !_AFX_NO_APPMENUSTRING_RESOURCES
+
+	AFX_IDS_MEMORY_EXCEPTION,       "Не хватает памяти."
+	AFX_IDS_NOT_SUPPORTED_EXCEPTION,"Вызвана неподдерживаемая операция."
+	AFX_IDS_RESOURCE_EXCEPTION,     "Требуемый рессурс недоступен."
+	AFX_IDS_USER_EXCEPTION,         "Неизвестная ошибка."
+
+	// General error prompts
+#ifndef _AFX_NO_FILECMD_RESOURCES
+	AFX_IDP_INVALID_FILENAME,       "Ошибочное имя файла."
+	AFX_IDP_FAILED_TO_OPEN_DOC,     "Ошибка открытия документа."
+	AFX_IDP_FAILED_TO_SAVE_DOC,     "Ошибка записи документа."
+#ifndef _MAC
+	AFX_IDP_ASK_TO_SAVE,            "Сохранить изменения в %1?"
+#else
+	AFX_IDP_ASK_TO_SAVE,            "Сохранить изменения в %1 документе \042%2\042?"
+#endif
+	AFX_IDP_FAILED_TO_CREATE_DOC,   "Ошибка создания пустого документа."
+	AFX_IDP_FILE_TOO_LARGE,         "Этот файл слишком большой для открытия."
+	AFX_IDP_FAILED_TO_START_PRINT,  "Невозможно начать пачать."
+#endif // !_AFX_NO_FILECMD_RESOURCES
+	AFX_IDP_FAILED_TO_LAUNCH_HELP,  "Ошибка запуска помощи."
+	AFX_IDP_INTERNAL_FAILURE,       "Внутренняя ошибка приложения."
+	AFX_IDP_COMMAND_FAILURE,        "Команда не выполнена."
+	AFX_IDP_FAILED_MEMORY_ALLOC     "Мало памяти для выполнения операции."
+	AFX_IDP_GET_NOT_SUPPORTED,      "Нельзя прочесть свойство только для записи."
+	AFX_IDP_SET_NOT_SUPPORTED,      "Нельзя записать свойство только для чтения."
+	AFX_IDP_UNREG_DONE,             "Записи реестра удалены и INI был стёрт."
+	                                    
+	AFX_IDP_UNREG_FAILURE,          "Не все записи реестра (или INI файла) были удалены."  
+                                      
+	AFX_IDP_DLL_LOAD_FAILED,        "Эта программа требует файл %s, который не найден"
+	                                
+	AFX_IDP_DLL_BAD_VERSION,        "This program is linked to the missing export %s in the file %s. This machine may have an incompatible version of %s."
+	
+
+	// CFile/CArchive error strings for user failure
+#ifndef _AFX_NO_CFILE_RESOURCES
+	AFX_IDP_FAILED_INVALID_FORMAT   "Ошибочный формат файла."
+#ifndef _MAC
+	AFX_IDP_FAILED_INVALID_PATH     "%1\nНевозможно найти этот файл.\nПроверьте правильность пути и имени файла."
+	AFX_IDP_FAILED_DISK_FULL        "Диск назначения полон."
+#else
+	AFX_IDP_FAILED_INVALID_PATH     "Невозможно найти файл \042%1.\042 Проверьте правильность пути и имени файла."
+	AFX_IDP_FAILED_DISK_FULL        "Диск назначения полон."
+#endif
+	AFX_IDP_FAILED_ACCESS_READ      "Невозможно прочесть с %1, это открыто где-то ещё."
+	AFX_IDP_FAILED_ACCESS_WRITE     "Невозможно записать в %1, это только для чтения либо открыто где-то ещё."
+	AFX_IDP_FAILED_IO_ERROR_READ    "Неизвестная ошибка при чтении %1."
+	AFX_IDP_FAILED_IO_ERROR_WRITE   "Неизвестная ошибка при записи %1."
+#endif // !_AFX_NO_CFILE_RESOURCES
+
+	// Parsing error prompts
+	AFX_IDP_PARSE_INT,              "Введите целое."
+	AFX_IDP_PARSE_REAL,             "Введите число."
+	AFX_IDP_PARSE_INT_RANGE,        "Введите целое между %1 и %2."
+	AFX_IDP_PARSE_REAL_RANGE,       "Введите число между %1 и %2."
+	AFX_IDP_PARSE_STRING_SIZE,      "Введите не более %1 символов."
+	AFX_IDP_PARSE_RADIO_BUTTON,     "Выберете кнопку."
+	AFX_IDP_PARSE_BYTE,             "Введите целое между 0 и 255."
+	AFX_IDP_PARSE_UINT,             "Введите положительное целое."
+	AFX_IDP_PARSE_DATETIME,         "Введите дату и/или время."
+	AFX_IDP_PARSE_CURRENCY,         "Введите валюту."
+
+#ifndef _AFX_NO_OLE_RESOURCES
+	// OLE strings required for both servers and containers
+	AFX_IDS_PASTELINKEDTYPE         "Связан %s"
+	AFX_IDS_UNKNOWNTYPE             "Неизвестный тип"
+#ifndef _MAC
+	AFX_IDP_FAILED_TO_NOTIFY        "%1\nНевожно зарегистрировать документ.\nДокумент может уже быть открыт."
+#else
+	AFX_IDP_FAILED_TO_NOTIFY        "Unable to register document \042%1.\042 The document may already be open."
+#endif
+#endif //!_AFX_NO_OLE_RESOURCES
+
+	AFX_IDP_NO_ERROR_AVAILABLE      "Недоступны сообщения об ошибках."
+
+#ifndef _AFX_NO_CFILE_RESOURCES
+	AFX_IDP_FILE_NONE                "Ошибок нет."
+	AFX_IDP_FILE_GENERIC             "Неизвестная ошибка произошла во время доступа к файлу %1."
+	AFX_IDP_FILE_NOT_FOUND           "%1 файл не найден."
+	AFX_IDP_FILE_BAD_PATH            "%1 содержит неверный путь."
+	AFX_IDP_FILE_TOO_MANY_OPEN       "%1 нельзя открыть так как уже открыто много файлов."
+	AFX_IDP_FILE_ACCESS_DENIED       "Доступ к %1 провалился."
+	AFX_IDP_FILE_INVALID_FILE        "Ршибочный идентификатор файла связан с %1."
+	AFX_IDP_FILE_REMOVE_CURRENT      "%1 невозможно удалить так как это текущий каталог."
+	AFX_IDP_FILE_DIR_FULL            "%1 нельзя создать так как каталог полон."
+	AFX_IDP_FILE_BAD_SEEK            "Позиционирование провалилось %1"
+	AFX_IDP_FILE_HARD_IO             "Аппаратная ошибка произошла во время доступа к %1."
+	AFX_IDP_FILE_SHARING             "Ошибка разделения доступа произошла для %1."
+	AFX_IDP_FILE_LOCKING             "Ошибка блокировки доступа произошла для %1."
+	AFX_IDP_FILE_DISKFULL            "Диск переполнился во время доступа к %1."
+	AFX_IDP_FILE_EOF                 "Недопустимый доступ к %1 - достигнут конец."
+	AFX_IDS_UNNAMED_FILE             "неименованный файл"
+#endif // !_AFX_NO_CFILE_RESOURCES
+
+	AFX_IDP_ARCH_NONE               "Нет ошибок."
+	AFX_IDP_ARCH_GENERIC                "Неизвестная ошибка произошла во время доступа к %1."
+	AFX_IDP_ARCH_READONLY           "Попытка записи во архив для чтения %1."
+	AFX_IDP_ARCH_ENDOFFILE          "Недопустимый доступ к %1 - достигнут конец."
+	AFX_IDP_ARCH_WRITEONLY          "Нельзя читать из архива только для записи %1."
+	AFX_IDP_ARCH_BADINDEX           "%1 имеет неверный формат."
+	AFX_IDP_ARCH_BADCLASS           "%1 содержит неизвестный объект."
+	AFX_IDP_ARCH_BADSCHEMA          "%1 ошибочная схема."
+
+#ifndef _AFX_NO_MAPI_RESOURCES
+	// MAPI strings / error messages
+	AFX_IDP_FAILED_MAPI_LOAD        "Unable to load mail system support."
+	AFX_IDP_INVALID_MAPI_DLL        "Mail system DLL is invalid."
+	AFX_IDP_FAILED_MAPI_SEND        "Send Mail failed to send message."
+#endif //!_AFX_NO_MAPI_RESOURCES
+
+#ifndef _AFX_NO_OCC_RESOURCES
+	AFX_IDS_OCC_SCALEUNITS_PIXELS   "pixels"
+#endif //!_AFX_NO_OCC_RESOURCES
+END
+
+//#endif
+//#endif
